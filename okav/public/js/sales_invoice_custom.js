@@ -29,6 +29,7 @@ frappe.ui.form.on('Sales Invoice', {
                                     default: frm.doc.outstanding_amount
                                 },
                                 {
+                        
                                     label: 'Cheque/Reference No.',
                                     fieldname: 'reference_no',
                                     fieldtype: 'Data',
@@ -78,6 +79,15 @@ frappe.ui.form.on('Sales Invoice', {
                                     });
                             }
                         });
+                        d.fields_dict.mode_of_payment.df.onchange = function() {
+                            const mop_value = this.get_value();
+                            if(mop_value === 'Cash') {
+                                d.fields_dict.reference_no.df.hidden = 1;
+                            } else {
+                                d.fields_dict.reference_no.df.hidden = 0;
+                            }
+                            d.refresh();
+                        }
                         d.show();
                     },
                 });

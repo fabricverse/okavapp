@@ -61,7 +61,7 @@ def get_data(filters):
             `tabSales Invoice`.name,
             customer,
             custom_expected_delivery_time,
-            GROUP_CONCAT(CONCAT(item_code, '(', uom, ')(', ROUND(qty, 2), ')') SEPARATOR ',') AS items
+            GROUP_CONCAT(CONCAT(item_code, '(', ROUND(qty, 2), ' ', uom, ') ') SEPARATOR ',') AS items
         FROM
             `tabSales Invoice`
         JOIN
