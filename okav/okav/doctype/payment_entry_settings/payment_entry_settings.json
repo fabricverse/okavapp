@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-15 11:28:17.237846",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "submit_payment_entry_from_dialog"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "submit_payment_entry_from_dialog",
+   "fieldtype": "Check",
+   "label": "Submit Payment Entry from dialog?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-08-25 11:06:26.620450",
+ "modified_by": "Administrator",
+ "module": "Okav",
+ "name": "Payment Entry Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
