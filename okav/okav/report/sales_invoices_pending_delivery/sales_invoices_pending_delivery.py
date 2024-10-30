@@ -10,13 +10,13 @@ def execute(filters=None):
 def get_data(filters):
     conditions = []
     
-    invoices_with_dn = frappe.get_all("Delivery Note",
-        filters={
-            "docstatus": 1
-        },
-        fields=["items.against_sales_invoice"],
-        as_list=1
-    )
+    # invoices_with_dn = frappe.get_all("Delivery Note",
+    #     filters={
+    #         "docstatus": 1
+    #     },
+    #     fields=["items.against_sales_invoice"],
+    #     as_list=1
+    # )
 
     if filters.get('customer'):
         conditions.append(f"customer = '{filters.get('customer')}'")

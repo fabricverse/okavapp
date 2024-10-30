@@ -10,6 +10,7 @@ frappe.ui.form.on('Sales Invoice', {
                     },
                     callback: function(r) {
                         var doc = frappe.model.sync(r.message)[0]; // Ensure we get the first document
+                        frm.doc.payment_schedule = null;
 
                         let d = new frappe.ui.Dialog({
                             title: "Enter Required Fields and Submit!",
